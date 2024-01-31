@@ -1,12 +1,51 @@
 @import 'assets/fonts/NTSEAWAVE/stylesheet.css';
+@import 'assets/fonts/Montserrat/stylesheet.css';
 
-// add MONTSERRAT REGULAR medium and light font from google fonts
-@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900&display=swap');
+// VARIABLES //
+$font-1: 'NT SEAWAVE standart', Helvetica, Arial, sans-serif;
+$font-2: 'Montserrat', Helvetica, Arial, sans-serif;
+$font-3: 'Montserrat-Medium', Helvetica, Arial, sans-serif;
+$font-4: 'Montserrat-Light', Helvetica, Arial, sans-serif;
+
+$color-1: #4E5243;
+$color-2: #909380;
+$color-3: #9F6F53;
+$color-4: #CFAC8E;
+$verde-5: #DDD4C4;
+
+// STYLES //
+h1 {
+    font-family: $font-1;
+    font-size: 70px;
+    font-weight: 100;
+}
+
+h2 {
+    font-family: $font-2;
+    font-size: 30px;
+}
+
+h3 {
+    font-family: $font-3;
+    font-size: 22px;
+}
+
+p {
+    font-family: $font-4;
+    font-size: 16px;
+}
+
+
+
 
 //
 
 body {
     font-family: 'NT SEAWAVE standart';
+}
+
+section#keyvisual {
+
 }
 
 
