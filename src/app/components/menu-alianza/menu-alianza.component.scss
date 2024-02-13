@@ -1,8 +1,9 @@
-$font1: "'Open Sans', sans-serif, Helvetica;";
+@import '../../../assets/fonts/Montserrat/stylesheet.css';
+$font1: "'Montserrat-Medium', 'Open Sans', sans-serif, Helvetica;";
 
 $menuHeight: 70px;
 $menuPadding: 8px;
-$menuPaddingLR:18%;  //Paddin left and right in Destopk  
+$menuPaddingLR: 5%;  //Paddin left and right in Destopk  
 
 $socialPhoneSize: 50px;  // widht and height of social icons
 
@@ -103,6 +104,22 @@ nav {
                 
             }
 
+            li.special-item {
+                text-align: center;
+                a {
+                    display: inline;
+                    border: solid 1px $colorText;
+                    border-radius: 20px;
+                    height: initial;
+                    padding: 10px 15px;
+                }
+
+                a::before {
+                    content: none;
+                    display: none;
+                }
+            }
+
             a::before {
                 content: "";
                 display: inline-block;
@@ -150,8 +167,7 @@ nav {
     nav {
         display: flex;
         padding: 0 $menuPaddingLR;
-        position: sticky;
-       
+        position: sticky;       
 
         .head {
             background: none;
@@ -162,7 +178,7 @@ nav {
             margin-left: auto;
             background: none;
             flex-direction: row;
-            justify-content: flex-end;
+            justify-content: space-between;
 
             position: relative;
             top: 0;
@@ -172,13 +188,14 @@ nav {
             padding: $menuPadding 0;
 
             ul.items {
-                //background: red;
                 flex: initial;
                 display: flex; 
+                width: 100%;
                 padding: 0;
+                justify-content: space-between;
                  
                  li {
-                    margin-left: 10px;
+                    margin-left: 30px;
                     margin-bottom: 0;
                     height: initial;
                     line-height: initial;

@@ -25,9 +25,9 @@ $font-size-xxxl: clamp(3.05rem, 2.05vw + 2.54rem, 5rem);
 $gap: clamp(1rem, 0.94rem + 0.30000000000000004vw, 1.3rem);
 
 // GLOBAL STYLES //
-body {
-    margin: 0;
-}
+html { scroll-behavior: smooth; }
+
+body { margin: 0; }
 
 h1 {
     font-family: $font-1;
