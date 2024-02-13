@@ -1,0 +1,290 @@
+$font1: "'Open Sans', sans-serif, Helvetica;";
+
+$menuHeight: 70px;
+$menuPadding: 8px;
+$menuPaddingLR:18%;  //Paddin left and right in Destopk  
+
+$socialPhoneSize: 50px;  // widht and height of social icons
+
+$color1: #9F6F53;
+$color2: #DDD4C4;
+$colorText: #fff;
+$colorCloseBtn: $colorText;
+$backColor: $color1;
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    a {
+        text-decoration: none;
+        cursor: pointer;
+        
+        &:link,
+        &:visited,
+        &:active { color: $colorText; }
+
+        &:hover { color: $color2; }
+
+        &.active { color: $color2; }
+    } 
+}
+
+nav {
+    box-sizing: border-box;
+    font-family: $font1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    color: $colorText;
+    background-color: $backColor;
+  
+    .head {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        flex: 0 0 auto;
+        padding: $menuPadding;
+        z-index: 2;
+        background: $color1;
+
+        .logo {          
+            margin: auto;
+
+            img {
+                display: block;
+                height: $menuHeight - $menuPadding * 2;        
+            }
+        }
+
+        .toggle {
+            width: $menuHeight - $menuPadding * 2;
+            height: $menuHeight - $menuPadding * 2;
+        }
+    }
+
+    .collapse {
+        background: $color1;
+        position: absolute;
+        top: -100vh;
+        width: 100%;
+        height: 100vh;
+        z-index: 1;
+        transition: top 0.3s ease-in;
+        padding-top: $menuHeight;
+        overflow: hidden;
+
+        display: flex;
+        flex-direction: column;
+
+        &.active { top: 0; }
+
+        ul.items {
+            text-transform: uppercase;
+            padding: 10% 0 20% 0;
+            padding: 10vw 0 20vw 0;
+
+            li {
+                margin-bottom: 5px;
+                height: 10vw;
+                line-height: 10vw;
+                a {
+                    display: inline-block;
+                    width: 100%;
+                    height: 100%;
+                    font-size: 16px;
+                    @media only screen and (min-width : 768px) {
+                        font-size: 30px;
+                    }
+                }
+
+                
+            }
+
+            a::before {
+                content: "";
+                display: inline-block;
+                width: 20%;
+                height: 1px;
+                vertical-align: middle;
+                background-color: $colorText;
+                margin-right: 10px;
+            }
+        }
+
+        ul.social {
+            flex: 1;
+            background: $color2;
+
+            display: flex;
+            justify-content: center;
+
+            li {
+                height: $socialPhoneSize;
+                transform: translateY(-50%);
+                margin-left: 10px;
+
+                a{
+                    display: flex;
+                    width: $socialPhoneSize;
+                    height: $socialPhoneSize;
+                    justify-content: center;
+                    align-items: center;
+
+                    svg, img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+
+@media only screen and (min-width : 1200px) {
+    
+    nav {
+        display: flex;
+        padding: 0 $menuPaddingLR;
+        position: sticky;
+       
+
+        .head {
+            background: none;
+            .toggle {display: none;}
+        } 
+
+        .collapse {
+            margin-left: auto;
+            background: none;
+            flex-direction: row;
+            justify-content: flex-end;
+
+            position: relative;
+            top: 0;
+            width: initial;
+            height: initial;
+            padding-top: 0;
+            padding: $menuPadding 0;
+
+            ul.items {
+                //background: red;
+                flex: initial;
+                display: flex; 
+                padding: 0;
+                 
+                 li {
+                    margin-left: 10px;
+                    margin-bottom: 0;
+                    height: initial;
+                    line-height: initial;
+                    position: relative;
+
+                    a{ 
+                        font-size: 14px; 
+                        display: block;
+                        width: initial;
+                        position: relative;
+                        line-height: $menuHeight - $menuPadding * 2;
+                    }
+                 }
+
+                 a::before {
+                    content: none;
+                    display: none;
+                 }
+            }
+
+            ul.social {
+                background: none;
+                flex: initial;
+                position: initial;
+                width: initial;
+                height: initial;
+                padding-top: initial;
+                flex: 1;
+            }
+
+            ul.social {
+                margin-left: 10px;
+                li {                
+                    transform: initial;
+                    height: initial;
+    
+                    a{
+                        width: $menuHeight - $menuPadding * 2;
+                        height: $menuHeight - $menuPadding * 2;
+
+                        svg, img {
+                            width: 60%;
+                            height: 60%;
+                        }
+                    }
+    
+                }
+            }
+        }
+    }
+}
+
+$butterflyLineHeight: 3px;
+
+
+.butterfly {
+    position: relative;
+    cursor: pointer;
+    //background: blueviolet;
+    .center-line,
+    .center-line::before,
+    .center-line::after {
+        position: absolute;
+        height: $butterflyLineHeight;
+        width: 100%;
+        background-color: $colorCloseBtn;
+        border-radius: 1.5px; 
+        box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+        transition: top .3s .3s, transform .3s;
+    }
+
+    .center-line {   
+        top: 50%;   
+        transform: translateY(-50%); 
+        transition: background-color .3s .3s, box-shadow .3s .3s;
+    }
+
+    .center-line::before {
+        content: "";
+        top: -10px;
+    }
+
+    .center-line::after {
+        content: "";
+        top: 10px;
+    }
+
+    &.active {
+        .center-line {
+            background-color: transparent;
+            box-shadow: initial;
+            transition: background-color .3s, box-shadow .3s;
+        }
+
+        .center-line::before,
+        .center-line::after {
+            top: 0;
+            transition: top .3s, transform .3s .3s;
+        }
+        .center-line::before {
+            transform: rotate(45deg);
+        }
+
+        .center-line::after {
+            transform: rotate(-45deg);
+        }
+    }
+
+}

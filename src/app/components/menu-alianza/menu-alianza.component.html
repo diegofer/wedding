@@ -1,0 +1,31 @@
+<nav [class.active]="expandir">
+
+    <div class="head">
+        <a class="logo" href="#keyvisual" target="_blank" >
+            <img src="assets/img/logo.png" alt="Sara & Asaf">
+        </a>
+        <div class="toggle butterfly" [class.active]="expandir" (click)="expandir = !expandir" >
+            <div class="center-line"></div>
+        </div>
+    </div>
+    
+    <div class="collapse" [class.active]="expandir" >
+
+        <ul class="items">
+            <li *ngFor="let item of $menuItems | async" >
+                <a [routerLink]="[item.path]" 
+                   routerLinkActive="active"
+                   (click)="expandir = !expandir">{{item.name}}</a>
+            </li>   
+            <li>
+                <a href="#features" pageScroll  (click)="expandir = !expandir">Features</a>
+            </li>
+ 
+        </ul>
+
+        <ul class="social">
+            
+        </ul>
+
+    </div>
+</nav>

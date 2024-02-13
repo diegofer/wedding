@@ -31,29 +31,31 @@ body {
 
 h1 {
     font-family: $font-1;
-    font-size: 70px;
+    font-size: $font-size-xxxl;
     font-weight: 100;
     margin: 0;
 }
 
 h2 {
     font-family: $font-2;
-    font-size: 30px;
+    font-size: $font-size-lg;
 }
 
 h3 {
     font-family: $font-3;
-    font-size: 22px;
+    font-size: $font-size-md;
 }
 
 p {
     font-family: $font-4;
-    font-size: 16px;
+    font-size: $font-size-base;
 }
 
 section {
     position: relative;
 }
+
+img {display: block;}
 
 
 // SECTION KEYVISUAL //
