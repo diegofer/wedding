@@ -1,7 +1,7 @@
 <nav [class.active]="expandir">
 
     <div class="head">
-        <a class="logo" href="#keyvisual"  >
+        <a class="logo" href="#keyvisual" (mouseup)="expandir = !expandir"  >
             <img src="assets/img/logo.svg" alt="Sara & Asaf">
         </a>
         <div class="toggle butterfly" [class.active]="expandir" (click)="expandir = !expandir" >
@@ -18,28 +18,28 @@
                    (click)="expandir = !expandir">{{item.name}}</a>
             </li>   
             <li>
-                <a href="#invitacion" (click)="expandir = !expandir">INVITACIÓN</a>
+                <a href="#invitacion" (mouseup)="expandir = !expandir">INVITACIÓN</a>
             </li>
             <li>
-                <a href="#fecha" (click)="expandir = !expandir">FECHA</a>
+                <a href="#fecha" (mouseup)="expandir = !expandir">FECHA</a>
             </li>
             <li>
-                <a href="#lugar" (click)="expandir = !expandir">LUGAR</a>
+                <a href="#lugar" (mouseup)="expandir = !expandir">LUGAR</a>
             </li>
             <li>
-                <a href="#playlist" (click)="expandir = !expandir">PLAYLIST</a>
+                <a href="#playlist" (mouseup)="expandir = !expandir">PLAYLIST</a>
             </li>
             <li>
-                <a href="#invitacion" (click)="expandir = !expandir">TU MIRADA</a>
+                <a href="#invitacion" (mouseup)="expandir = !expandir">TU MIRADA</a>
             </li>
             <li>
-                <a href="#etiqueta" (click)="expandir = !expandir">ETIQUETA</a>
+                <a href="#etiqueta" (mouseup)="expandir = !expandir">ETIQUETA</a>
             </li>
             <li>
-                <a href="#regalos" (click)="expandir = !expandir">LISTA DE REGALOS</a>
+                <a href="#regalos" (mouseup)="expandir = !expandir">LISTA DE REGALOS</a>
             </li>
             <li class="special-item">
-                <a href="#confirma" (click)="expandir = !expandir">CONFIRMA TU ASISTENCIA</a>
+                <a href="#confirma" (mouseup)="expandir = !expandir">CONFIRMA TU ASISTENCIA</a>
             </li>
  
         </ul>

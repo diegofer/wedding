@@ -158,6 +158,7 @@ $deco-h-offset: -5vh;
 section.two-columns {
     display: flex;
     flex-wrap: wrap;
+    scroll-margin-top: 70px;
 
     .box-1 {
         flex: 1 1 100%;
