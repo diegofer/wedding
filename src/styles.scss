@@ -55,7 +55,7 @@ section {
     position: relative;
 }
 
-img {display: block;}
+img {display: block; width: 100%;}
 
 
 // SECTION KEYVISUAL //
@@ -118,6 +118,72 @@ section#keyvisual {
             } 
         }
     }
+
+}
+
+// SECTION TWO COLUMS DEFATULT //
+$deco-height: 13vh;
+$deco-v-offset: -5vw;
+$deco-h-offset: -5vh;
+
+section.two-columns {
+    display: flex;
+    flex-wrap: wrap;
+
+    .box-1 {
+        flex: 1 1 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @media all and (min-width: 1200px) { flex: 1 1 55%; }
+
+        .content {
+            margin: 8vh;
+            text-align: center;
+            position: relative;
+
+            @media all and (min-width: 1200px) { margin: 15vh; }
+
+            h1 { margin-bottom: 5vh; }
+
+            img.deco {
+                position: absolute;
+                width: auto;
+                height: $deco-height;
+                z-index: -9;
+            }
+
+            img.top-right {
+                top: $deco-v-offset;
+                right: $deco-h-offset;
+
+                @media all and (min-width: 1200px) { 
+                    right: $deco-h-offset;
+                }
+            }
+
+            img.bottom-left {
+                bottom: $deco-v-offset;
+                left: $deco-h-offset;  
+                height: $deco-height - 8vh; 
+                
+                @media all and (min-width: 1200px) { 
+                    left: $deco-h-offset; 
+                }
+            }
+        };
+    }
+
+    .box-2 {
+        flex: 1 1 100%;
+        @media all and (min-width: 1200px) { flex: 1 1 45%; }
+    }
+}
+
+// SECTION INVITACION //
+
+section#invitacion {
 
 }
 
