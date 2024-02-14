@@ -62,6 +62,7 @@ img {display: block; width: 100%;}
 a.btn-wedding {
     display: inline-block;
     padding: 15px 20px;
+    margin-top: 5vh;
     font-family: $font-2;
     background-color: transparent;
     border: solid 2px $color-4;
@@ -158,7 +159,7 @@ $deco-h-offset: -5vh;
 section.two-columns {
     display: flex;
     flex-wrap: wrap;
-    scroll-margin-top: 70px;
+    scroll-margin-top: 69px;
 
     .box-1 {
         flex: 1 1 100%;
@@ -173,7 +174,7 @@ section.two-columns {
             text-align: center;
             position: relative;
 
-            @media all and (min-width: 1200px) { margin: 15vh; }
+            @media all and (min-width: 1200px) { margin: 10vh 15vh; }
 
             h1 { margin-bottom: 5vh; }
 
@@ -213,10 +214,8 @@ section.two-columns {
 
 // SECTION INVITACION //
 
-section#invitacion {
 
-}
-
+// SECTION LUGAR //
 section#lugar {
     h1 { color: $color-3;} 
     
@@ -226,19 +225,38 @@ section#lugar {
             z-index: 10;
         }
 
-        img.bottom-left {
-            height: $deco-height;
-        }
+        img.bottom-left { height: $deco-height; }
 
         p { 
             font-weight: bold;
             margin-top: 5vh;
         }
-
-        a.btn-wedding {
-            margin-top: 5vh;
-        }
     }
 }
 
+// SECTION ETIQUETA //
+section#etiqueta {
+    h1 { 
+        color: $color-3;
+        margin-bottom: -3vh;
+    } 
+
+    .box-1 {
+        img.top-left {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: $deco-height + 5vh;
+            width: auto;
+            z-index: -1;
+        }
+    }
+    
+    .content {
+          p { 
+            margin-top: 2vh;
+            //font-weight: bold;
+        }
+    }
+}
 
