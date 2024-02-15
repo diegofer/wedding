@@ -64,10 +64,11 @@ a.btn-wedding {
     padding: 15px 20px;
     margin-top: 5vh;
     font-family: $font-2;
+    font-weight: bold;
     background-color: transparent;
     border: solid 2px $color-4;
     border-radius: 30px;
-    font-size: $font-size-md;
+    font-size: $font-size-base;
     text-align: center;
     text-transform: uppercase;
     text-decoration: none;
@@ -87,6 +88,18 @@ a.btn-style-2 {
 
     &:hover {
         background-color: transparent;
+    }
+}
+
+a.btn-style-3 { 
+    color: initial;
+    border-color: $color-0;
+    background-color: $color-0;
+
+    &:hover {
+        background-color: $color-0;
+        color: initial;
+        opacity: 0.8;
     }
 }
 
@@ -282,6 +295,48 @@ section#lugar {
     }
 }
 
+
+// SECTION CUENTA
+
+section#cuenta {
+    background-image: url("assets/img/cuenta/cuenta_m.jpg");
+    color: $color-0;
+
+    @media all and (min-width: 1200px) { 
+        background-image: url("assets/img/cuenta/cuenta_d.jpg");
+     }
+
+     .box {
+        @media all and (min-width: 1200px) { flex: 0 1 60%; }
+
+        .content {
+            h1 { margin-bottom: 5vh; }
+        }
+    }
+}
+
+.countdown {
+    display: inline-flex;
+    border: solid 1px $color-0;
+    border-radius: 50px;
+    gap: 30px;
+    padding: 10px 30px;
+
+    .number {
+        font-family: $font-4;
+        font-size: $font-size-xl;
+        font-weight: bold;
+        color: $color-0;
+    }
+
+    .text {
+        font-family: $font-4;
+        font-size: 10px;
+        color: $color-0;
+        font-weight: bold;
+    }
+    
+}
 
 // SECTION CONFIRMA  //
 section#confirma {
