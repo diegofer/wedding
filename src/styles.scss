@@ -86,6 +86,87 @@ a.btn-style-2 {
     border-color: $color-0;
 }
 
+// SECTION TWO COLUMS DEFATULT //
+$deco-height: 13vh;
+$deco-v-offset: -5vw;
+$deco-h-offset: -5vh;
+
+section.one-column {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    scroll-margin-top: 70px;
+    padding: 10vh 0;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    .box {
+        flex: 0 1 90%;
+        text-align: center;
+
+        @media all and (min-width: 1200px) { flex: 0 1 80%; }
+    }
+}
+
+section.two-columns {
+    display: flex;
+    flex-wrap: wrap;
+    scroll-margin-top: 70px;
+
+    .box-1 {
+        flex: 1 1 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @media all and (min-width: 1200px) { flex: 1 1 55%; }
+
+        .content {
+            margin: 8vh;
+            text-align: center;
+            position: relative;
+
+            @media all and (min-width: 1200px) { margin: 10vh 15vh; }
+
+            h1 { margin-bottom: 5vh; }
+
+            img.deco {
+                position: absolute;
+                width: auto;
+                height: $deco-height;
+                z-index: -9;
+            }
+
+            img.top-right {
+                top: $deco-v-offset;
+                right: $deco-h-offset;
+
+                @media all and (min-width: 1200px) { 
+                    right: $deco-h-offset;
+                }
+            }
+
+            img.bottom-left {
+                bottom: $deco-v-offset;
+                left: $deco-h-offset;  
+                height: $deco-height - 8vh; 
+                
+                @media all and (min-width: 1200px) { 
+                    left: $deco-h-offset; 
+                }
+            }
+        };
+    }
+
+    .box-2 {
+        flex: 1 1 100%;
+        @media all and (min-width: 1200px) { flex: 1 1 45%; }
+    }
+}
+
+
 
 // SECTION KEYVISUAL //
 
@@ -148,72 +229,35 @@ section#keyvisual {
             } 
         }
     }
-
 }
 
-// SECTION TWO COLUMS DEFATULT //
-$deco-height: 13vh;
-$deco-v-offset: -5vw;
-$deco-h-offset: -5vh;
-
-section.two-columns {
-    display: flex;
-    flex-wrap: wrap;
-    scroll-margin-top: 69px;
-
-    .box-1 {
-        flex: 1 1 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        @media all and (min-width: 1200px) { flex: 1 1 55%; }
-
-        .content {
-            margin: 8vh;
-            text-align: center;
-            position: relative;
-
-            @media all and (min-width: 1200px) { margin: 10vh 15vh; }
-
-            h1 { margin-bottom: 5vh; }
-
-            img.deco {
-                position: absolute;
-                width: auto;
-                height: $deco-height;
-                z-index: -9;
-            }
-
-            img.top-right {
-                top: $deco-v-offset;
-                right: $deco-h-offset;
-
-                @media all and (min-width: 1200px) { 
-                    right: $deco-h-offset;
-                }
-            }
-
-            img.bottom-left {
-                bottom: $deco-v-offset;
-                left: $deco-h-offset;  
-                height: $deco-height - 8vh; 
-                
-                @media all and (min-width: 1200px) { 
-                    left: $deco-h-offset; 
-                }
-            }
-        };
-    }
-
-    .box-2 {
-        flex: 1 1 100%;
-        @media all and (min-width: 1200px) { flex: 1 1 45%; }
-    }
-}
 
 // SECTION INVITACION //
 
+// SECTION FECHA //
+section#fecha {
+    color: $color-0;
+    background-image: url("assets/img/fecha/video_bg_d.jpg");
+    background-color: $color-1;
+
+    .box {
+        @media all and (min-width: 1200px) { flex: 0 1 60%; }
+
+        .content {
+
+            h1 { 
+                margin-bottom: 5vh;
+                color: $color-5;
+            }
+            video {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+    
+
+}
 
 // SECTION LUGAR //
 section#lugar {
