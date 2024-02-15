@@ -84,6 +84,10 @@ a.btn-style-1 { color: $color-4;}
 a.btn-style-2 { 
     color: $color-0;
     border-color: $color-0;
+
+    &:hover {
+        background-color: transparent;
+    }
 }
 
 // SECTION TWO COLUMS DEFATULT //
@@ -277,6 +281,27 @@ section#lugar {
         }
     }
 }
+
+
+// SECTION CONFIRMA  //
+section#confirma {
+    color: $color-0;
+    background-image: url("assets/img/confirma/confirma_m.jpg");
+    background-color: $color-1;
+
+    @media all and (min-width: 1200px) { 
+        background-image: url("assets/img/confirma/confirma_d.jpg");
+     }
+
+    .box {
+        @media all and (min-width: 1200px) { flex: 0 1 60%; }
+
+        .content {
+            p { padding: 0 20%;}
+        }
+    }
+}
+
 
 // SECTION ETIQUETA //
 section#etiqueta {
