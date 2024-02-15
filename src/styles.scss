@@ -465,3 +465,32 @@ section#etiqueta {
     }
 }
 
+// SECTION GRACIAS  //
+section#gracias {
+    color: $color-0;
+    background-image: url("assets/img/gracias/gracias_bg_m.jpg");
+    background-color: $color-1;
+
+    color: $color-1;
+
+    @media all and (min-width: 1200px) { 
+        background-image: url("assets/img/gracias/gracias_bg_d.jpg");
+     }
+
+    .box {
+        @media all and (min-width: 1200px) { flex: 0 1 60%; }
+
+        .content {
+            h2 { margin-bottom: 5vh;}
+            p { padding: 0 20%;}
+
+            img { 
+                display: inline-block;
+                width: 30vh; 
+                transform: translateX(-10%);
+            }
+        }
+    }
+}
+
+.mt-0 { margin-top: 0; }
