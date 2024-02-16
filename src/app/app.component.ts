@@ -4,11 +4,15 @@ import { RouterOutlet } from '@angular/router';
 import { MenuAlianzaComponent } from './components/menu-alianza/menu-alianza.component';
 import { interval, Observable, Subscription } from 'rxjs';
 import { map, takeWhile } from 'rxjs/operators';
+import { CarouselModule } from 'ngx-bootstrap/carousel';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, MenuAlianzaComponent],
+  imports: [CommonModule, 
+            RouterOutlet, 
+            MenuAlianzaComponent,
+            CarouselModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
