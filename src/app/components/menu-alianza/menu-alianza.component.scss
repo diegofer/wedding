@@ -52,11 +52,11 @@ nav {
         background: $color1;
 
         .logo {          
-            margin: auto;
-
+            margin: 0 auto 0 0;   // logo a la izquierda en movil
+            display: flex;
             img {
                 display: block;
-                height: $menuHeight - $menuPadding * 2;        
+                height: $menuHeight - $menuPadding * 2;       
             }
         }
 
